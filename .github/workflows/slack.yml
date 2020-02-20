@@ -1,0 +1,28 @@
+name: Slack
+
+on: 
+  watch:
+    types: [started]
+
+jobs:
+  celebrate:
+    name: Celebrate
+    runs-on: [ubuntu-latest]
+    steps: 
+    - uses: 8398a7/action-slack@v2
+      with:
+        status: custom
+        payload: | 
+           {
+            text: "GitHub Stargazer",
+            attachments: [{
+              color: "good", 
+              title: "NEW STAR!", 
+              text: ${{github.event.sender}}
+            }]
+           }
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }} # required
+      if: always() # P
+     
+ 
