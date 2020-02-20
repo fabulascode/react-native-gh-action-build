@@ -19,7 +19,7 @@ jobs:
                "type": "section", 
                "text": {
                  "type": "mrkdwn",
-                 "text": "✨New Star from *<${{github.event.sender.url}}|${{ github.actor }}>*!✨\n\n ${{github.event.repository.name}} now has *${{ github.event.repository.stargazers_count }}* stargazers!" 
+                 "text": "✨New Star from *<${{github.event.sender.url}}|${{ github.actor }}>*!✨\n\n Hot dog! <${{github.event.repository.name}}|${{github.event.repository.html_url}}> now has *${{ github.event.repository.stargazers_count }}* stargazers! Keep up the good work!!" 
                  },
                "accessory": {
                  "type": "image",
