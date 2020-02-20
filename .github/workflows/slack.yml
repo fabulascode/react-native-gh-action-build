@@ -18,7 +18,7 @@ jobs:
             attachments: [{
               color: "good", 
               title: "NEW STAR!", 
-              text: ${{GITHUB_ACTOR}}
+              text: ${{ github.actor }}
             }]
            }
       env:
