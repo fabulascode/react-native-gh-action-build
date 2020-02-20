@@ -18,7 +18,7 @@ jobs:
             attachments: [{
               color: "good", 
               title: "NEW STAR!", 
-              text: ${{ github.actor }}
+              text: "${{ github.actor }} just starred ${{github.event.repository.name}}! Total stars: ${{ github.event.repository.stargazers_count }} " 
             }]
            }
       env:
