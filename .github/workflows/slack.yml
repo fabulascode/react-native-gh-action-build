@@ -15,10 +15,18 @@ jobs:
         payload: | 
            {
             text: "GitHub Stargazer",
+            blocks: [{
+              "type": "section", 
+              "text": {
+                "type": "mrkdwn",
+                "text": "**Woo!** <${{github.event.sender.url}}|${{ github.actor }}> just starred ${{github.event.repository.name}}! " 
+                  }
+                }
+              ],  
             attachments: [{
-              color: "good", 
-              title: "NEW STAR!", 
-              text: "${{ github.actor }} just starred ${{github.event.repository.name}}! Total stars: ${{ github.event.repository.stargazers_count }} " 
+              color: "#d4af37", 
+              title: "✨New Star !✨", 
+              text: "<${{github.event.sender.url}}|${{ github.actor }}> just starred ${{github.event.repository.name}}! Total stars: ${{ github.event.repository.stargazers_count }} " 
             }]
            }
       env:
